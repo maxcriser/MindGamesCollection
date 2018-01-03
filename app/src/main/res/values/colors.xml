@@ -17,7 +17,9 @@
     <color name="fragment_background_color">@color/white</color>
     <color name="poster_blurred_color">#a0000000</color>
     <color name="drawer_blurred_color">#c8000000</color>
-    <color name="ripple_drawer_item_background_color">#808080</color>
-    <color name="ripple_drawer_item_background_rectangle_color">#fff</color>
+    <color name="ripple_drawer_item_background_color">#252525</color>
+    <color name="ripple_drawer_item_background_rectangle_color">#000000</color>
+    <color name="rules_line_color">#004D40</color>
+    <color name="text_color">@android:color/black</color>
 
 </resources>

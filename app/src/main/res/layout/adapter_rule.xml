@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/rule_top_padding"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/rule_recycler_padding"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="@dimen/rule_left_view_width"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:id="@+id/rule_top_line"
+                    android:layout_width="@dimen/rule_line_width"
+                    android:layout_height="16dp"
+                    android:background="@color/rules_line_color"/>
+
+                <FrameLayout
+                    android:id="@+id/rule_bottom_line"
+                    android:layout_width="@dimen/rule_line_width"
+                    android:layout_height="36dp"
+                    android:background="@color/rules_line_color"/>
+
+            </LinearLayout>
+
+            <android.support.v7.widget.AppCompatImageView
+                android:layout_width="@dimen/rule_circle_outer_size"
+                android:layout_height="@dimen/rule_circle_outer_size"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="2dp"
+                app:srcCompat="@drawable/rule_circle_outer"/>
+
+            <android.support.v7.widget.AppCompatImageView
+                android:layout_width="@dimen/rule_circle_interior_size"
+                android:layout_height="@dimen/rule_circle_interior_size"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+                app:srcCompat="@drawable/rule_circle_interior"/>
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/rule_title"
+                style="@style/RulesTitleStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="Title title title"/>
+
+            <TextView
+                android:id="@+id/rule_description"
+                style="@style/RulesDescriptionStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="Description description description description description description"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/rule_bottom_padding"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/rule_recycler_padding"
+        android:visibility="gone"/>
+
+</LinearLayout>
