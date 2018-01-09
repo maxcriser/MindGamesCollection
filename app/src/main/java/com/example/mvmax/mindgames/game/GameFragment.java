@@ -61,7 +61,7 @@ public class GameFragment extends BaseFragment {
             return;
         }
 
-        final InfoPagerAdapter adapter = new InfoPagerAdapter(activity.getSupportFragmentManager(), tabLayout, mGameCardModel.getRuleModelList());
+        final InfoPagerAdapter adapter = new InfoPagerAdapter(activity.getSupportFragmentManager(), tabLayout, mGameCardModel);
 
         viewPager.setAdapter(adapter);
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));

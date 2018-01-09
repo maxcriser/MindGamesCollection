@@ -14,28 +14,24 @@ import com.example.mvmax.mindgames.util.UiUtils;
 import java.util.Collection;
 import java.util.List;
 
-public class RulesAdapter extends RecyclerView.Adapter<RulesAdapter.NewsViewHolder> {
+public class RulesAdapter extends RecyclerView.Adapter<RulesAdapter.RuleViewHolder> {
 
     private List<RuleModel> mList;
 
-    final class NewsViewHolder extends RecyclerView.ViewHolder {
+    final class RuleViewHolder extends RecyclerView.ViewHolder {
 
         private final TextView mTitle;
         private final TextView mDescription;
         private final FrameLayout mTopLine;
         private final FrameLayout mBottomLine;
-        private final View mTopPadding;
-        private final View mBottomPadding;
 
-        private NewsViewHolder(final View view) {
+        private RuleViewHolder(final View view) {
             super(view);
 
             mTitle = view.findViewById(R.id.rule_title);
             mDescription = view.findViewById(R.id.rule_description);
             mTopLine = view.findViewById(R.id.rule_top_line);
             mBottomLine = view.findViewById(R.id.rule_bottom_line);
-            mTopPadding = view.findViewById(R.id.rule_top_padding);
-            mBottomPadding = view.findViewById(R.id.rule_bottom_padding);
         }
     }
 
@@ -54,14 +50,14 @@ public class RulesAdapter extends RecyclerView.Adapter<RulesAdapter.NewsViewHold
     }
 
     @Override
-    public NewsViewHolder onCreateViewHolder(final ViewGroup parent, final int viewType) {
+    public RuleViewHolder onCreateViewHolder(final ViewGroup parent, final int viewType) {
         final View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.adapter_rule, parent, false);
 
-        return new NewsViewHolder(itemView);
+        return new RuleViewHolder(itemView);
     }
 
     @Override
-    public void onBindViewHolder(final NewsViewHolder holder, final int pCurrentPosition) {
+    public void onBindViewHolder(final RuleViewHolder holder, final int pCurrentPosition) {
         final RuleModel item = mList.get(pCurrentPosition);
 
         holder.mTitle.setText(item.getTitle());
@@ -69,12 +65,10 @@ public class RulesAdapter extends RecyclerView.Adapter<RulesAdapter.NewsViewHold
 
         if (pCurrentPosition == 0) {
             holder.mTopLine.setVisibility(View.INVISIBLE);
-            holder.mTopPadding.setVisibility(View.VISIBLE);
         }
 
         if (pCurrentPosition == getItemCount() - 1) {
             holder.mBottomLine.setVisibility(View.INVISIBLE);
-            holder.mBottomPadding.setVisibility(View.VISIBLE);
         } else {
             final ViewGroup.LayoutParams layoutParams = holder.mBottomLine.getLayoutParams();
 

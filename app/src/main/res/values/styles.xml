@@ -63,4 +63,22 @@
         <item name="android:textSize">@dimen/game_fragment_rules_text_description_size</item>
     </style>
 
+    <style name="DialogExampleMessageTextStyle">
+        <item name="android:fontFamily">sans-serif-thin</item>
+        <item name="android:textColor">@color/text_color</item>
+        <item name="android:textSize">@dimen/dialog_example_text_message_size</item>
+    </style>
+
+    <style name="DialogExampleMessagePlayerStyle" parent="DialogExampleMessageTextStyle">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="DialogExampleMessagePresenterStyle" parent="DialogExampleMessageTextStyle">
+        <item name="android:textColor">@color/text_color</item>
+    </style>
+
+    <style name="DialogExampleMessageInformationStyle" parent="DialogExampleMessageTextStyle">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
 </resources>

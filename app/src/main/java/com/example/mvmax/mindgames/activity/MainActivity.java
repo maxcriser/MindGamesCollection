@@ -5,6 +5,7 @@ import android.support.v4.view.ViewPager;
 
 import com.example.mvmax.mindgames.R;
 import com.example.mvmax.mindgames.adapter.CardPagerPagerAdapter;
+import com.example.mvmax.mindgames.dialogexample.DialogMessageModel;
 import com.example.mvmax.mindgames.listener.OpenDrawerClickListener;
 import com.example.mvmax.mindgames.model.GameCardModel;
 import com.example.mvmax.mindgames.rules.RuleModel;
@@ -43,21 +44,34 @@ public class MainActivity extends BaseActivity {
 
         // TODO: 03.01.2018 remove after testing MOVE ALL CARDS TO GAME FRAGMENTS TO STATIC VARIABLES
 
-        final List<RuleModel> list = new ArrayList<>();
-        list.add(new RuleModel("title title", "description description description description description description"));
-        list.add(new RuleModel("title title", "description description description description description description"));
-        list.add(new RuleModel("title title", "description description description description description description"));
-        list.add(new RuleModel("title title", "description description description description description description"));
-        list.add(new RuleModel("title title", "description description description description description description"));
-        list.add(new RuleModel("title title", "description description description description description description"));
+        final List<RuleModel> rulesList = new ArrayList<>();
+        rulesList.add(new RuleModel("title title", "description description description description description description"));
+        rulesList.add(new RuleModel("title title", "description description description description description description"));
+        rulesList.add(new RuleModel("title title", "description description description description description description"));
+        rulesList.add(new RuleModel("title title", "description description description description description description"));
+        rulesList.add(new RuleModel("title title", "description description description description description description"));
+        rulesList.add(new RuleModel("title title", "description description description description description description"));
+
+        final List<DialogMessageModel> exampleList = new ArrayList<>();
+        exampleList.add(new DialogMessageModel("Lorem ipsum  ipsum  ipsum  ipsum  ipsum", DialogMessageModel.DialogMessageType.INFO));
+        exampleList.add(new DialogMessageModel("Lorem ipsum  ipsum  ipsum  ipsum  ipsum", DialogMessageModel.DialogMessageType.PRESENTER));
+        exampleList.add(new DialogMessageModel("Lorem ipsum  ipsum  ipsum  ipsum  ipsum", DialogMessageModel.DialogMessageType.PLAYER));
+        exampleList.add(new DialogMessageModel("Lorem ipsum  ipsum  ipsum  ipsum  ipsum", DialogMessageModel.DialogMessageType.PRESENTER));
+        exampleList.add(new DialogMessageModel("Lorem ipsum  ipsum  ipsum  ipsum  ipsum", DialogMessageModel.DialogMessageType.PRESENTER));
+        exampleList.add(new DialogMessageModel("Lorem ipsum  ipsum  ipsum  ipsum  ipsum", DialogMessageModel.DialogMessageType.PLAYER));
+        exampleList.add(new DialogMessageModel("Lorem ipsum  ipsum  ipsum  ipsum  ipsum", DialogMessageModel.DialogMessageType.PLAYER));
+        exampleList.add(new DialogMessageModel("Lorem ipsum  ipsum  ipsum  ipsum  ipsum", DialogMessageModel.DialogMessageType.PRESENTER));
+        exampleList.add(new DialogMessageModel("Lorem ipsum  ipsum  ipsum  ipsum  ipsum", DialogMessageModel.DialogMessageType.PLAYER));
+        exampleList.add(new DialogMessageModel("Lorem ipsum  ipsum  ipsum  ipsum  ipsum", DialogMessageModel.DialogMessageType.PRESENTER));
+        exampleList.add(new DialogMessageModel("Lorem ipsum  ipsum  ipsum  ipsum  ipsum", DialogMessageModel.DialogMessageType.INFO));
 
         mCardAdapter = new CardPagerPagerAdapter(this);
-        mCardAdapter.addCardItem(new GameCardModel(R.drawable.template_poster, "Game name", "The best of the best of the best game in the World.", list));
-        mCardAdapter.addCardItem(new GameCardModel(R.drawable.template_poster_2, "Game name", "The best of the best of the best game in the World.", list));
-        mCardAdapter.addCardItem(new GameCardModel(R.drawable.template_poster_3, "Game name", "The best of the best of the best game in the World.", list));
-        mCardAdapter.addCardItem(new GameCardModel(R.drawable.template_poster_4, "Game name", "The best of the best of the best game in the World.", list));
-        mCardAdapter.addCardItem(new GameCardModel(R.drawable.template_poster_5, "Game name", "The best of the best of the best game in the World.", list));
-        mCardAdapter.addCardItem(new GameCardModel(R.drawable.template_poster_6, "Game name", "The best of the best of the best game in the World.", list));
+        mCardAdapter.addCardItem(new GameCardModel(R.drawable.template_poster, "Game name", "The best of the best of the best game in the World.", rulesList, exampleList));
+        mCardAdapter.addCardItem(new GameCardModel(R.drawable.template_poster_2, "Game name", "The best of the best of the best game in the World.", rulesList, exampleList));
+        mCardAdapter.addCardItem(new GameCardModel(R.drawable.template_poster_3, "Game name", "The best of the best of the best game in the World.", rulesList, exampleList));
+        mCardAdapter.addCardItem(new GameCardModel(R.drawable.template_poster_4, "Game name", "The best of the best of the best game in the World.", rulesList, exampleList));
+        mCardAdapter.addCardItem(new GameCardModel(R.drawable.template_poster_5, "Game name", "The best of the best of the best game in the World.", rulesList, exampleList));
+        mCardAdapter.addCardItem(new GameCardModel(R.drawable.template_poster_6, "Game name", "The best of the best of the best game in the World.", rulesList, exampleList));
 
         mCardShadowTransformer = new ShadowTransformer(mViewPager, mCardAdapter);
         mCardShadowTransformer.enableScaling();

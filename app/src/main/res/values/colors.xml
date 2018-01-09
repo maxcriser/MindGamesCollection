@@ -9,17 +9,24 @@
     <color name="gray_opacity_114">#90909090</color>
     <color name="shadow_gray_opacity_102">#66000000</color>
     <color name="shadow_gray_opacity_150">#96000000</color>
+    <color name="shadow_gray_opacity_200">#c8000000</color>
+    <color name="shadow_gray_opacity_230">#e6000000</color>
+    <color name="material_blue">#0b84fd</color>
 
     // dynamic names
     <color name="toolbar_elements_color">@color/white</color>
     <color name="drawer_item_text">@color/white</color>
     <color name="toolbar_color">@color/shadow_gray_opacity_102</color>
+    <color name="example_message_info_color">@color/shadow_gray_opacity_200</color>
+    <color name="example_message_info_header_color">@color/shadow_gray_opacity_102</color>
     <color name="fragment_background_color">@color/white</color>
     <color name="poster_blurred_color">#a0000000</color>
     <color name="drawer_blurred_color">#c8000000</color>
     <color name="ripple_drawer_item_background_color">#252525</color>
     <color name="ripple_drawer_item_background_rectangle_color">#000000</color>
-    <color name="rules_line_color">#004D40</color>
+    <color name="rules_line_color">@color/material_blue</color>
     <color name="text_color">@android:color/black</color>
+    <color name="example_message_player_color">@color/material_blue</color>
+    <color name="example_message_presenter_color">#e6e5eb</color>
 
 </resources>

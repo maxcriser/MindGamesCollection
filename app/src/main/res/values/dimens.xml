@@ -23,6 +23,7 @@
     <dimen name="game_fragment_rules_text_title_size">16sp</dimen>
     <dimen name="game_fragment_header_text_description_size">14sp</dimen>
     <dimen name="game_fragment_rules_text_description_size">14sp</dimen>
+    <dimen name="dialog_example_text_message_size">14sp</dimen>
     <dimen name="drawer_item_button_height">48dp</dimen>
     <dimen name="drawer_item_padding_left">16dp</dimen>
     <dimen name="search_bar_height">56dp</dimen>
@@ -34,5 +35,12 @@
     <dimen name="rule_circle_interior_size">12dp</dimen>
     <dimen name="rule_left_view_width">36dp</dimen>
     <dimen name="rule_recycler_padding">16dp</dimen>
+    <dimen name="dialog_example_message_padding">10dp</dimen>
+    <dimen name="dialog_example_message_left_right_padding">16dp</dimen>
+    <dimen name="dialog_example_message_bottom_margin">6dp</dimen>
+    <dimen name="dialog_example_view_padding">10dp</dimen>
+    <dimen name="message_round_value">16dp</dimen>
+    <dimen name="example_message_right_margin">6dp</dimen>
+    <dimen name="example_message_icon_bottom_margin">-3dp</dimen>
 
 </resources>

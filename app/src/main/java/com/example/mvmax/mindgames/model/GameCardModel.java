@@ -1,5 +1,6 @@
 package com.example.mvmax.mindgames.model;
 
+import com.example.mvmax.mindgames.dialogexample.DialogMessageModel;
 import com.example.mvmax.mindgames.rules.RuleModel;
 
 import java.io.Serializable;
@@ -11,12 +12,15 @@ public class GameCardModel implements Serializable {
     private final String mName;
     private final String mDescription;
     private final List<RuleModel> mRuleModelList;
+    private final List<DialogMessageModel> mDialogMesageModelList;
 
-    public GameCardModel(final int pPoster, final String pName, final String pDescription, final List<RuleModel> pRuleModelList) {
+    public GameCardModel(final int pPoster, final String pName, final String pDescription,
+                         final List<RuleModel> pRuleModelList, final List<DialogMessageModel> pDialogMesageModelList) {
         mPoster = pPoster;
         mName = pName;
         mDescription = pDescription;
         mRuleModelList = pRuleModelList;
+        mDialogMesageModelList = pDialogMesageModelList;
     }
 
     public int getPoster() {
@@ -29,6 +33,10 @@ public class GameCardModel implements Serializable {
 
     public List<RuleModel> getRuleModelList() {
         return mRuleModelList;
+    }
+
+    public List<DialogMessageModel> getDialogExampleModelList() {
+        return mDialogMesageModelList;
     }
 
     public String getDescription() {

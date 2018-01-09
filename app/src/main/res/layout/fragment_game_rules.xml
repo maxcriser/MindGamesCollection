@@ -1,16 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <com.example.mvmax.mindgames.rules.RulesView
         android:id="@+id/game_fragment_rules_view"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingEnd="@dimen/rule_recycler_padding"
-        android:paddingRight="@dimen/rule_recycler_padding"
-        tools:ignore="RtlSymmetry"/>
+        android:layout_height="wrap_content"/>
 
 </FrameLayout>
