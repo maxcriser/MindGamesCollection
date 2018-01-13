@@ -1,6 +1,7 @@
 package com.example.mvmax.mindgames.model;
 
 import com.example.mvmax.mindgames.dialogexample.DialogMessageModel;
+import com.example.mvmax.mindgames.games.BaseGame;
 import com.example.mvmax.mindgames.rules.RuleModel;
 
 import java.io.Serializable;
@@ -8,38 +9,33 @@ import java.util.List;
 
 public class GameCardModel implements Serializable {
 
-    private final int mPoster;
-    private final String mName;
-    private final String mDescription;
-    private final List<RuleModel> mRuleModelList;
-    private final List<DialogMessageModel> mDialogMesageModelList;
+    private final BaseGame mBaseGame;
 
-    public GameCardModel(final int pPoster, final String pName, final String pDescription,
-                         final List<RuleModel> pRuleModelList, final List<DialogMessageModel> pDialogMesageModelList) {
-        mPoster = pPoster;
-        mName = pName;
-        mDescription = pDescription;
-        mRuleModelList = pRuleModelList;
-        mDialogMesageModelList = pDialogMesageModelList;
+    public GameCardModel(final BaseGame pBaseGame) {
+        mBaseGame = pBaseGame;
+    }
+
+    public List<GameCardTabModel> getTabList() {
+        return mBaseGame.getTabList();
     }
 
     public int getPoster() {
-        return mPoster;
+        return mBaseGame.getPoster();
     }
 
     public String getName() {
-        return mName;
+        return mBaseGame.getName();
     }
 
-    public List<RuleModel> getRuleModelList() {
-        return mRuleModelList;
+    public List<RuleModel> getRuleList() {
+        return mBaseGame.getRuleList();
     }
 
     public List<DialogMessageModel> getDialogExampleModelList() {
-        return mDialogMesageModelList;
+        return mBaseGame.getDialogMessageList();
     }
 
     public String getDescription() {
-        return mDescription;
+        return mBaseGame.getDescription();
     }
 }

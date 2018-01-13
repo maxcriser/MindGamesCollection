@@ -53,6 +53,10 @@ public class DialogExampleAdapter extends RecyclerView.Adapter<DialogExampleAdap
                 layout = R.layout.adapter_dialog_message_presenter;
 
                 break;
+            case DialogMessageModel.DialogMessageType.FINISH:
+                layout = R.layout.adapter_dialog_message_finish;
+
+                break;
             default:
                 layout = R.layout.adapter_dialog_message_info;
 

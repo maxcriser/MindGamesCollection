@@ -1,4 +1,4 @@
-package com.example.mvmax.mindgames.game;
+package com.example.mvmax.mindgames.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;

@@ -30,7 +30,7 @@
             android:layout_marginEnd="@dimen/example_message_right_margin"
             android:layout_marginRight="@dimen/example_message_right_margin"
             android:background="@drawable/shape_rounded_corners_player"
-            android:gravity="center"
+            android:gravity="right"
             android:paddingBottom="@dimen/dialog_example_message_padding"
             android:paddingLeft="@dimen/dialog_example_message_left_right_padding"
             android:paddingRight="@dimen/dialog_example_message_left_right_padding"

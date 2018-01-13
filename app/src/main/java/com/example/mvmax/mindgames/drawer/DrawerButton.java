@@ -41,10 +41,10 @@ public class DrawerButton extends RelativeLayout {
     private void init(final AttributeSet pAttrs) {
         inflate();
 
-        @SuppressLint("CustomViewStyleable") final TypedArray typedArray = getContext().obtainStyledAttributes(pAttrs, R.styleable.drawer_button, 0, 0);
+        @SuppressLint("CustomViewStyleable") final TypedArray typedArray = getContext().obtainStyledAttributes(pAttrs, R.styleable.mg_drawer_button, 0, 0);
 
         try {
-            final String text = typedArray.getString(R.styleable.drawer_button_item_title);
+            final String text = typedArray.getString(R.styleable.mg_drawer_button_item_title);
 
             setText(text);
         } finally {

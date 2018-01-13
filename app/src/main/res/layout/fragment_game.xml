@@ -1,25 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/fragment_background_color"
     android:clickable="true"
     android:focusable="true"
     android:orientation="vertical">
+
+    <!--<android.support.v7.widget.AppCompatImageView-->
+    <!--android:id="@+id/game_fragment_background_image"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:scaleType="centerCrop"-->
+    <!--tools:srcCompat="@drawable/template_blurred_background"/>-->
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <include layout="@layout/view_game_header"/>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/game_fragment_top_layout_height_with_tab_layout">
+
+            <!--<include layout="@layout/view_main_blurred_layout"/>-->
+
+            <include layout="@layout/view_game_header"/>
+
+        </FrameLayout>
 
         <android.support.v4.view.ViewPager
             android:id="@+id/game_info_view_pager"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent"
+            android:background="@color/fragment_background_color"/>
 
     </LinearLayout>
 
-</LinearLayout>
+</FrameLayout>

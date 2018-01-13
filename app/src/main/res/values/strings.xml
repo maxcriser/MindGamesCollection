@@ -3,5 +3,8 @@
     <string name="app_name">Mind Games</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="game_card_rules">Rules</string>
+    <string name="game_card_example">Example</string>
+    <string name="begin_to_play">Begin to play</string>
 
 </resources>

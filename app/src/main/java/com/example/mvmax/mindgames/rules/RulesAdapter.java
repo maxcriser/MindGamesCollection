@@ -1,24 +1,23 @@
 package com.example.mvmax.mindgames.rules;
 
+import android.annotation.SuppressLint;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.ViewTreeObserver;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 
-import com.example.mvmax.mindgames.ContextHolder;
 import com.example.mvmax.mindgames.R;
-import com.example.mvmax.mindgames.util.UiUtils;
 
-import java.util.Collection;
 import java.util.List;
 
 public class RulesAdapter extends RecyclerView.Adapter<RulesAdapter.RuleViewHolder> {
 
     private List<RuleModel> mList;
 
-    final class RuleViewHolder extends RecyclerView.ViewHolder {
+    final class RuleViewHolder extends RecyclerView.ViewHolder implements ViewTreeObserver.OnPreDrawListener{
 
         private final TextView mTitle;
         private final TextView mDescription;
@@ -33,6 +32,15 @@ public class RulesAdapter extends RecyclerView.Adapter<RulesAdapter.RuleViewHold
             mTopLine = view.findViewById(R.id.rule_top_line);
             mBottomLine = view.findViewById(R.id.rule_bottom_line);
         }
+
+        @Override
+        public boolean onPreDraw() {
+            itemView.getViewTreeObserver().removeOnPreDrawListener(this);
+            mTitle.getViewTreeObserver().removeOnPreDrawListener(this);
+            mDescription.getViewTreeObserver().removeOnPreDrawListener(this);
+
+            return true;
+        }
     }
 
     public RulesAdapter(final List<RuleModel> pList) {
@@ -41,12 +49,6 @@ public class RulesAdapter extends RecyclerView.Adapter<RulesAdapter.RuleViewHold
 
     public void setData(final List<RuleModel> pList) {
         mList = pList;
-    }
-
-    public void addData(final Collection<RuleModel> pList) {
-        if (mList != null) {
-            mList.addAll(pList);
-        }
     }
 
     @Override
@@ -60,6 +62,10 @@ public class RulesAdapter extends RecyclerView.Adapter<RulesAdapter.RuleViewHold
     public void onBindViewHolder(final RuleViewHolder holder, final int pCurrentPosition) {
         final RuleModel item = mList.get(pCurrentPosition);
 
+        holder.itemView.getViewTreeObserver().addOnPreDrawListener(holder);
+        holder.mTitle.getViewTreeObserver().addOnPreDrawListener(holder);
+        holder.mDescription.getViewTreeObserver().addOnPreDrawListener(holder);
+
         holder.mTitle.setText(item.getTitle());
         holder.mDescription.setText(item.getDescription());
 
@@ -70,11 +76,43 @@ public class RulesAdapter extends RecyclerView.Adapter<RulesAdapter.RuleViewHold
         if (pCurrentPosition == getItemCount() - 1) {
             holder.mBottomLine.setVisibility(View.INVISIBLE);
         } else {
+            final int[] lineHeight = {0};
             final ViewGroup.LayoutParams layoutParams = holder.mBottomLine.getLayoutParams();
 
-            holder.mDescription.measure(0, 0);
-            layoutParams.height = (int) UiUtils.dpToPx(ContextHolder.get(), holder.mDescription.getMeasuredHeight());
-            holder.mBottomLine.setLayoutParams(layoutParams);
+            holder.mTitle.getViewTreeObserver().addOnPreDrawListener(new ViewTreeObserver.OnPreDrawListener() {
+
+                @Override
+                public boolean onPreDraw() {
+                    lineHeight[0] += holder.mTitle.getHeight();
+
+                    if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.JELLY_BEAN) {
+                        holder.mTitle.getViewTreeObserver().removeOnPreDrawListener(this);
+                    } else {
+                        holder.mTitle.getViewTreeObserver().removeOnPreDrawListener(this);
+                    }
+
+                    return true;
+                }
+            });
+
+            holder.mDescription.getViewTreeObserver().addOnPreDrawListener(new ViewTreeObserver.OnPreDrawListener() {
+
+                @Override
+                public boolean onPreDraw() {
+                    lineHeight[0] += holder.mDescription.getHeight();
+
+                    layoutParams.height = lineHeight[0];
+                    holder.mBottomLine.setLayoutParams(layoutParams);
+
+                    if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.JELLY_BEAN) {
+                        holder.mDescription.getViewTreeObserver().removeOnPreDrawListener(this);
+                    } else {
+                        holder.mDescription.getViewTreeObserver().removeOnPreDrawListener(this);
+                    }
+
+                    return true;
+                }
+            });
         }
     }
 

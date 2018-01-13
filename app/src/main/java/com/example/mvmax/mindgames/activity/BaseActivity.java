@@ -1,19 +1,18 @@
 package com.example.mvmax.mindgames.activity;
 
 import android.os.Bundle;
-import android.support.annotation.NonNull;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Gravity;
-import android.view.View;
 import android.widget.ImageView;
 
 import com.example.mvmax.mindgames.R;
-import com.example.mvmax.mindgames.game.GameFragment;
-import com.example.mvmax.mindgames.model.GameCardModel;
-import com.example.mvmax.mindgames.util.UiUtils;
+import com.example.mvmax.mindgames.collection.CollectionFragment;
+import com.example.mvmax.mindgames.collection.CollectionListener;
+import com.example.mvmax.mindgames.gamecard.GameCardFragment;
+import com.example.mvmax.mindgames.games.BaseGame;
 import com.squareup.picasso.MemoryPolicy;
 import com.squareup.picasso.Picasso;
 
@@ -28,13 +27,32 @@ public class BaseActivity extends AppCompatActivity {
         return findViewById(R.id.background_image);
     }
 
-    public void showGameFragment(final GameCardModel pGameCardModel) {
+    public void showCollectionFragment(final CollectionListener pCollectionListener) {
         final FragmentManager fragmentManager = getSupportFragmentManager();
         final FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
-        fragmentTransaction.add(android.R.id.content, GameFragment.newInstance(pGameCardModel))
+        fragmentTransaction.replace(R.id.activity_main_content, CollectionFragment.newInstance(pCollectionListener))
                 .addToBackStack(null)
                 .commit();
+    }
+
+    public void showGameFragment(final BaseGame pGameCardModel) {
+        final FragmentManager fragmentManager = getSupportFragmentManager();
+        final FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
+        fragmentTransaction.replace(R.id.activity_main_content, GameCardFragment.newInstance(pGameCardModel))
+                .addToBackStack(null)
+                .commit();
+    }
+
+    public void disableDrawer() {
+        final DrawerLayout mDrawerLayout = findViewById(R.id.drawer_layout);
+        mDrawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED);
+    }
+
+    public void enableDrawer() {
+        final DrawerLayout mDrawerLayout = findViewById(R.id.drawer_layout);
+        mDrawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_UNLOCKED);
     }
 
     public void openDrawer() {
@@ -55,15 +73,5 @@ public class BaseActivity extends AppCompatActivity {
                 .memoryPolicy(MemoryPolicy.NO_CACHE, MemoryPolicy.NO_STORE)
                 .placeholder(backgroundImageView.getDrawable())
                 .into(backgroundImageView);
-    }
-
-    public void setViewStatusBarPadding(@NonNull final View pView) {
-        pView.setPadding(0, UiUtils.getStatusBarHeight(this), 0, 0);
-    }
-
-    public void setContentStatusBarPadding() {
-        final View contentView = findViewById(R.id.activity_base_content);
-
-        setViewStatusBarPadding(contentView);
     }
 }

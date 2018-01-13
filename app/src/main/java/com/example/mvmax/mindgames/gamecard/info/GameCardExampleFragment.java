@@ -1,4 +1,4 @@
-package com.example.mvmax.mindgames.game.info;
+package com.example.mvmax.mindgames.gamecard.info;
 
 import android.os.Bundle;
 import android.os.Parcelable;
@@ -16,7 +16,7 @@ import com.example.mvmax.mindgames.dialogexample.DialogMessageModel;
 import java.util.ArrayList;
 import java.util.List;
 
-public class GameExampleFragment extends Fragment {
+public class GameCardExampleFragment extends Fragment {
 
     public static final String EXTRA_DIALOG_EXAMPLE_MODEL_LIST = "extra_example_message_model_list";
     List<DialogMessageModel> mDialogMessageModelList;
@@ -26,10 +26,10 @@ public class GameExampleFragment extends Fragment {
         final Bundle bundle = new Bundle();
         bundle.putParcelableArrayList(EXTRA_DIALOG_EXAMPLE_MODEL_LIST, (ArrayList<? extends Parcelable>) mRuleModelList);
 
-        final GameExampleFragment gameExampleFragment = new GameExampleFragment();
-        gameExampleFragment.setArguments(bundle);
+        final GameCardExampleFragment gameCardExampleFragment = new GameCardExampleFragment();
+        gameCardExampleFragment.setArguments(bundle);
 
-        return gameExampleFragment;
+        return gameCardExampleFragment;
     }
 
     @Override

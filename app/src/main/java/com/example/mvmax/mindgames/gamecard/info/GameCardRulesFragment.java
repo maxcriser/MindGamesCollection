@@ -1,4 +1,4 @@
-package com.example.mvmax.mindgames.game.info;
+package com.example.mvmax.mindgames.gamecard.info;
 
 import android.os.Bundle;
 import android.os.Parcelable;
@@ -10,14 +10,13 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.mvmax.mindgames.R;
-import com.example.mvmax.mindgames.game.GameFragment;
 import com.example.mvmax.mindgames.rules.RuleModel;
 import com.example.mvmax.mindgames.rules.RulesView;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class GameRulesFragment extends Fragment {
+public class GameCardRulesFragment extends Fragment {
 
     public static final String EXTRA_RULE_MODEL_LIST = "extra_rule_model_list";
     List<RuleModel> mRuleModelList;
@@ -27,7 +26,7 @@ public class GameRulesFragment extends Fragment {
         final Bundle bundle = new Bundle();
         bundle.putParcelableArrayList(EXTRA_RULE_MODEL_LIST, (ArrayList<? extends Parcelable>) mRuleModelList);
 
-        final GameRulesFragment baseFragment = new GameRulesFragment();
+        final GameCardRulesFragment baseFragment = new GameCardRulesFragment();
         baseFragment.setArguments(bundle);
 
         return baseFragment;

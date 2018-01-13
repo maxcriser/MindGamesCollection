@@ -76,11 +76,11 @@ public class Toolbar extends RelativeLayout {
     private void init(final AttributeSet pAttrs) {
         inflate();
 
-        @SuppressLint("CustomViewStyleable") final TypedArray typedArray = getContext().obtainStyledAttributes(pAttrs, R.styleable.custom_toolbar, 0, 0);
+        @SuppressLint("CustomViewStyleable") final TypedArray typedArray = getContext().obtainStyledAttributes(pAttrs, R.styleable.mg_toolbar, 0, 0);
 
         try {
-            final String titleString = typedArray.getString(R.styleable.custom_toolbar_title);
-            final int actions = typedArray.getInteger(R.styleable.custom_toolbar_action, Action.NONE);
+            final String titleString = typedArray.getString(R.styleable.mg_toolbar_title);
+            final int actions = typedArray.getInteger(R.styleable.mg_toolbar_action, Action.NONE);
 
             updateView(actions);
             setTitle(titleString);

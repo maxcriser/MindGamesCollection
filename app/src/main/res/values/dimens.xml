@@ -42,5 +42,8 @@
     <dimen name="message_round_value">16dp</dimen>
     <dimen name="example_message_right_margin">6dp</dimen>
     <dimen name="example_message_icon_bottom_margin">-3dp</dimen>
+    <dimen name="toolbar_text_size">16sp</dimen>
+    <dimen name="play_button_icon_padding">8dp</dimen>
+    <dimen name="play_button_text_size">14sp</dimen>
 
 </resources>
