@@ -1,4 +1,4 @@
-package com.example.mvmax.mindgames.example;
+package com.example.mvmax.mindgames.gamecard.info.example;
 
 import android.content.Context;
 import android.support.v7.widget.LinearLayoutManager;

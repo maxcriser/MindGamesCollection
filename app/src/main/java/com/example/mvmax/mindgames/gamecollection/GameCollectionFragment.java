@@ -12,17 +12,17 @@ import android.view.ViewGroup;
 import com.example.mvmax.mindgames.R;
 import com.example.mvmax.mindgames.base.BaseFragment;
 import com.example.mvmax.mindgames.gamecollection.adapter.GameCollectionPagerAdapter;
-import com.example.mvmax.mindgames.gamecollection.listener.GameCollectionListener;
-import com.example.mvmax.mindgames.games.YesNoGame;
-import com.example.mvmax.mindgames.listener.OpenDrawerClickListener;
+import com.example.mvmax.mindgames.gamecollection.listener.IGameCollectionListener;
+import com.example.mvmax.mindgames.games.YesNoGame.YesNoGame;
+import com.example.mvmax.mindgames.clicklistener.OpenDrawerClickListener;
 import com.example.mvmax.mindgames.toolbar.Toolbar;
-import com.example.mvmax.mindgames.transformer.ShadowTransformer;
+import com.example.mvmax.mindgames.gamecollection.transformer.ShadowTransformer;
 
 public class GameCollectionFragment extends BaseFragment {
 
     private static final String EXTRA_COLLECTION_LISTENER = "extra_collection_listener";
 
-    private GameCollectionListener mGameCollectionListener;
+    private IGameCollectionListener mGameCollectionListener;
     private Toolbar mToolbar;
     private ViewPager mViewPager;
     private GameCollectionPagerAdapter mCardAdapter;
@@ -36,7 +36,7 @@ public class GameCollectionFragment extends BaseFragment {
         }
     };
 
-    public static Fragment newInstance(@NonNull final GameCollectionListener pGameCollectionListener) {
+    public static Fragment newInstance(@NonNull final IGameCollectionListener pGameCollectionListener) {
         final Bundle bundle = new Bundle();
 
         bundle.putSerializable(EXTRA_COLLECTION_LISTENER, pGameCollectionListener);
@@ -57,7 +57,7 @@ public class GameCollectionFragment extends BaseFragment {
             return;
         }
 
-        mGameCollectionListener = (GameCollectionListener) bundle.getSerializable(EXTRA_COLLECTION_LISTENER);
+        mGameCollectionListener = (IGameCollectionListener) bundle.getSerializable(EXTRA_COLLECTION_LISTENER);
 
         setStatusBarPadding();
         initViews();

@@ -1,4 +1,4 @@
-package com.example.mvmax.mindgames.model;
+package com.example.mvmax.mindgames.gamecard.model;
 
 import android.support.v4.app.Fragment;
 

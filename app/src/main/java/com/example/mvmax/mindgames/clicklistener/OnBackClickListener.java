@@ -1,20 +1,20 @@
-package com.example.mvmax.mindgames.listener;
+package com.example.mvmax.mindgames.clicklistener;
 
 import android.content.Context;
 import android.view.View;
 
 import com.example.mvmax.mindgames.base.BaseActivity;
 
-public class OpenDrawerClickListener implements View.OnClickListener {
+public class OnBackClickListener implements View.OnClickListener {
 
     private final Context mContext;
 
-    public OpenDrawerClickListener(final Context pContext) {
+    public OnBackClickListener(final Context pContext) {
         mContext = pContext;
     }
 
     @Override
     public void onClick(final View pView) {
-        ((BaseActivity) mContext).openDrawer();
+        ((BaseActivity) mContext).onBackPressed();
     }
 }

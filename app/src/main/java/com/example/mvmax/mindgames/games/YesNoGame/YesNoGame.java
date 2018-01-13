@@ -1,4 +1,4 @@
-package com.example.mvmax.mindgames.games;
+package com.example.mvmax.mindgames.games.YesNoGame;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -9,11 +9,12 @@ import android.view.ViewGroup;
 
 import com.example.mvmax.mindgames.ContextHolder;
 import com.example.mvmax.mindgames.R;
-import com.example.mvmax.mindgames.example.ExampleMessageModel;
+import com.example.mvmax.mindgames.gamecard.info.example.ExampleMessageModel;
 import com.example.mvmax.mindgames.gamecard.info.GameCardExampleFragment;
 import com.example.mvmax.mindgames.gamecard.info.GameCardRulesFragment;
-import com.example.mvmax.mindgames.model.GameCardTabModel;
-import com.example.mvmax.mindgames.rules.RuleModel;
+import com.example.mvmax.mindgames.games.BaseGame;
+import com.example.mvmax.mindgames.gamecard.model.GameCardTabModel;
+import com.example.mvmax.mindgames.gamecard.info.rules.RuleModel;
 import com.thedeanda.lorem.LoremIpsum;
 
 import java.util.ArrayList;

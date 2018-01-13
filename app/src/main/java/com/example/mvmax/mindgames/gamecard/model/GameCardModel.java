@@ -1,8 +1,8 @@
-package com.example.mvmax.mindgames.model;
+package com.example.mvmax.mindgames.gamecard.model;
 
-import com.example.mvmax.mindgames.example.ExampleMessageModel;
+import com.example.mvmax.mindgames.gamecard.info.example.ExampleMessageModel;
 import com.example.mvmax.mindgames.games.BaseGame;
-import com.example.mvmax.mindgames.rules.RuleModel;
+import com.example.mvmax.mindgames.gamecard.info.rules.RuleModel;
 
 import java.io.Serializable;
 import java.util.List;

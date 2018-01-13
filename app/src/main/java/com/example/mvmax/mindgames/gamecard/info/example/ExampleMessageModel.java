@@ -1,4 +1,4 @@
-package com.example.mvmax.mindgames.example;
+package com.example.mvmax.mindgames.gamecard.info.example;
 
 import android.os.Parcel;
 import android.os.Parcelable;

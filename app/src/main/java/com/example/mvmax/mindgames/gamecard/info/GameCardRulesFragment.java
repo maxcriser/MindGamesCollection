@@ -10,8 +10,8 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.mvmax.mindgames.R;
-import com.example.mvmax.mindgames.rules.RuleModel;
-import com.example.mvmax.mindgames.rules.RulesView;
+import com.example.mvmax.mindgames.gamecard.info.rules.RuleModel;
+import com.example.mvmax.mindgames.gamecard.info.rules.RulesView;
 
 import java.util.ArrayList;
 import java.util.List;

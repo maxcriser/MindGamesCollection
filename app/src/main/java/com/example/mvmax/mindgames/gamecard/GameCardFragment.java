@@ -16,9 +16,9 @@ import android.widget.TextView;
 import com.example.mvmax.mindgames.R;
 import com.example.mvmax.mindgames.base.BaseFragment;
 import com.example.mvmax.mindgames.games.BaseGame;
-import com.example.mvmax.mindgames.listener.OnBackClickListener;
-import com.example.mvmax.mindgames.model.GameCardModel;
-import com.example.mvmax.mindgames.model.GameCardTabModel;
+import com.example.mvmax.mindgames.clicklistener.OnBackClickListener;
+import com.example.mvmax.mindgames.gamecard.model.GameCardModel;
+import com.example.mvmax.mindgames.gamecard.model.GameCardTabModel;
 import com.example.mvmax.mindgames.toolbar.Toolbar;
 import com.example.mvmax.mindgames.util.UiUtils;
 
@@ -77,7 +77,7 @@ public class GameCardFragment extends BaseFragment {
             return;
         }
 
-        final InfoPagerAdapter adapter = new InfoPagerAdapter(activity.getSupportFragmentManager(), mGameCardModel);
+        final GameCardInfoPagerAdapter adapter = new GameCardInfoPagerAdapter(activity.getSupportFragmentManager(), mGameCardModel);
 
         viewPager.setAdapter(adapter);
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));

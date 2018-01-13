@@ -7,9 +7,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.mvmax.mindgames.example.ExampleMessageModel;
-import com.example.mvmax.mindgames.model.GameCardTabModel;
-import com.example.mvmax.mindgames.rules.RuleModel;
+import com.example.mvmax.mindgames.gamecard.info.example.ExampleMessageModel;
+import com.example.mvmax.mindgames.gamecard.model.GameCardTabModel;
+import com.example.mvmax.mindgames.gamecard.info.rules.RuleModel;
 
 import java.util.List;
 

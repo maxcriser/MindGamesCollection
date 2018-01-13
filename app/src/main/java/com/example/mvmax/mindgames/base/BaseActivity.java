@@ -11,7 +11,7 @@ import android.widget.ImageView;
 import com.example.mvmax.mindgames.R;
 import com.example.mvmax.mindgames.gamecard.GameCardFragment;
 import com.example.mvmax.mindgames.gamecollection.GameCollectionFragment;
-import com.example.mvmax.mindgames.gamecollection.listener.GameCollectionListener;
+import com.example.mvmax.mindgames.gamecollection.listener.IGameCollectionListener;
 import com.example.mvmax.mindgames.games.BaseGame;
 import com.squareup.picasso.MemoryPolicy;
 import com.squareup.picasso.Picasso;
@@ -27,7 +27,7 @@ public class BaseActivity extends AppCompatActivity {
         return findViewById(R.id.background_image);
     }
 
-    public void showCollectionFragment(final GameCollectionListener pCollectionListener) {
+    public void showCollectionFragment(final IGameCollectionListener pCollectionListener) {
         final FragmentManager fragmentManager = getSupportFragmentManager();
         final FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 

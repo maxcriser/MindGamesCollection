@@ -1,4 +1,4 @@
-package com.example.mvmax.mindgames.example;
+package com.example.mvmax.mindgames.gamecard.info.example;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
