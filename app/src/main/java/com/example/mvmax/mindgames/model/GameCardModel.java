@@ -1,6 +1,6 @@
 package com.example.mvmax.mindgames.model;
 
-import com.example.mvmax.mindgames.dialogexample.DialogMessageModel;
+import com.example.mvmax.mindgames.example.ExampleMessageModel;
 import com.example.mvmax.mindgames.games.BaseGame;
 import com.example.mvmax.mindgames.rules.RuleModel;
 
@@ -31,7 +31,7 @@ public class GameCardModel implements Serializable {
         return mBaseGame.getRuleList();
     }
 
-    public List<DialogMessageModel> getDialogExampleModelList() {
+    public List<ExampleMessageModel> getDialogExampleModelList() {
         return mBaseGame.getDialogMessageList();
     }
 

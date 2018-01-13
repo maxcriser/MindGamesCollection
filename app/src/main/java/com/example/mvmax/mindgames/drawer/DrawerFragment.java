@@ -9,7 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.mvmax.mindgames.R;
-import com.example.mvmax.mindgames.fragment.BaseFragment;
+import com.example.mvmax.mindgames.base.BaseFragment;
 
 public class DrawerFragment extends BaseFragment {
 

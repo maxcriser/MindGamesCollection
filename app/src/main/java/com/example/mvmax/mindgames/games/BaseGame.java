@@ -7,7 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.mvmax.mindgames.dialogexample.DialogMessageModel;
+import com.example.mvmax.mindgames.example.ExampleMessageModel;
 import com.example.mvmax.mindgames.model.GameCardTabModel;
 import com.example.mvmax.mindgames.rules.RuleModel;
 
@@ -28,7 +28,7 @@ public abstract class BaseGame extends Fragment {
 
     public abstract List<RuleModel> getRuleList();
 
-    public abstract List<DialogMessageModel> getDialogMessageList();
+    public abstract List<ExampleMessageModel> getDialogMessageList();
 
     public abstract List<GameCardTabModel> getTabList();
 

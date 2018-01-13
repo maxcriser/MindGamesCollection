@@ -1,4 +1,4 @@
-package com.example.mvmax.mindgames.dialogexample;
+package com.example.mvmax.mindgames.example;
 
 import android.content.Context;
 import android.support.v7.widget.LinearLayoutManager;
@@ -10,21 +10,21 @@ import com.example.mvmax.mindgames.R;
 
 import java.util.List;
 
-public class DialogExampleView extends RelativeLayout {
+public class ExampleView extends RelativeLayout {
 
     private RecyclerView mRecyclerView;
 
-    public DialogExampleView(final Context context) {
+    public ExampleView(final Context context) {
         super(context);
         init();
     }
 
-    public DialogExampleView(final Context context, final AttributeSet attrs) {
+    public ExampleView(final Context context, final AttributeSet attrs) {
         super(context, attrs);
         init(attrs);
     }
 
-    public DialogExampleView(final Context context, final AttributeSet attrs, final int defStyle) {
+    public ExampleView(final Context context, final AttributeSet attrs, final int defStyle) {
         super(context, attrs, defStyle);
         init(attrs);
     }
@@ -43,9 +43,9 @@ public class DialogExampleView extends RelativeLayout {
         inflate();
     }
 
-    public void setItems(final List<DialogMessageModel> pDialogExampleModelList) {
+    public void setItems(final List<ExampleMessageModel> pDialogExampleModelList) {
         final LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
-        final DialogExampleAdapter mDialogExampleAdapter = new DialogExampleAdapter(pDialogExampleModelList);
+        final ExampleAdapter mDialogExampleAdapter = new ExampleAdapter(pDialogExampleModelList);
 
         mRecyclerView.setHasFixedSize(true);
         mRecyclerView.setLayoutManager(linearLayoutManager);

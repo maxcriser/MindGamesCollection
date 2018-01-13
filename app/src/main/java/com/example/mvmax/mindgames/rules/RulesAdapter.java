@@ -1,6 +1,5 @@
 package com.example.mvmax.mindgames.rules;
 
-import android.annotation.SuppressLint;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,7 +16,7 @@ public class RulesAdapter extends RecyclerView.Adapter<RulesAdapter.RuleViewHold
 
     private List<RuleModel> mList;
 
-    final class RuleViewHolder extends RecyclerView.ViewHolder implements ViewTreeObserver.OnPreDrawListener{
+    final class RuleViewHolder extends RecyclerView.ViewHolder implements ViewTreeObserver.OnPreDrawListener {
 
         private final TextView mTitle;
         private final TextView mDescription;

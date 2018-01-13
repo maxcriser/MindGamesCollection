@@ -1,4 +1,4 @@
-package com.example.mvmax.mindgames.dialogexample;
+package com.example.mvmax.mindgames.example;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -11,9 +11,9 @@ import com.example.mvmax.mindgames.R;
 import java.util.Collection;
 import java.util.List;
 
-public class DialogExampleAdapter extends RecyclerView.Adapter<DialogExampleAdapter.DialogExampleViewHolder> {
+public class ExampleAdapter extends RecyclerView.Adapter<ExampleAdapter.DialogExampleViewHolder> {
 
-    private List<DialogMessageModel> mList;
+    private List<ExampleMessageModel> mList;
 
     final class DialogExampleViewHolder extends RecyclerView.ViewHolder {
 
@@ -26,15 +26,15 @@ public class DialogExampleAdapter extends RecyclerView.Adapter<DialogExampleAdap
         }
     }
 
-    public DialogExampleAdapter(final List<DialogMessageModel> pList) {
+    public ExampleAdapter(final List<ExampleMessageModel> pList) {
         mList = pList;
     }
 
-    public void setData(final List<DialogMessageModel> pList) {
+    public void setData(final List<ExampleMessageModel> pList) {
         mList = pList;
     }
 
-    public void addData(final Collection<DialogMessageModel> pList) {
+    public void addData(final Collection<ExampleMessageModel> pList) {
         if (mList != null) {
             mList.addAll(pList);
         }
@@ -45,15 +45,15 @@ public class DialogExampleAdapter extends RecyclerView.Adapter<DialogExampleAdap
         final int layout;
 
         switch (viewType) {
-            case DialogMessageModel.DialogMessageType.PLAYER:
+            case ExampleMessageModel.DialogMessageType.PLAYER:
                 layout = R.layout.adapter_dialog_message_player;
 
                 break;
-            case DialogMessageModel.DialogMessageType.PRESENTER:
+            case ExampleMessageModel.DialogMessageType.PRESENTER:
                 layout = R.layout.adapter_dialog_message_presenter;
 
                 break;
-            case DialogMessageModel.DialogMessageType.FINISH:
+            case ExampleMessageModel.DialogMessageType.FINISH:
                 layout = R.layout.adapter_dialog_message_finish;
 
                 break;
@@ -70,7 +70,7 @@ public class DialogExampleAdapter extends RecyclerView.Adapter<DialogExampleAdap
 
     @Override
     public void onBindViewHolder(final DialogExampleViewHolder holder, final int pCurrentPosition) {
-        final DialogMessageModel item = mList.get(pCurrentPosition);
+        final ExampleMessageModel item = mList.get(pCurrentPosition);
 
         holder.mMessage.setText(item.getMessage());
     }

@@ -1,11 +1,11 @@
-package com.example.mvmax.mindgames.adapter;
+package com.example.mvmax.mindgames.gamecollection.adapter;
 
 import android.support.v7.widget.CardView;
 
 import com.example.mvmax.mindgames.ContextHolder;
 import com.example.mvmax.mindgames.R;
 
-public interface ICardPagerAdapter {
+public interface IGameCollectionPagerAdapter {
 
     int MAX_ELEVATION_FACTOR = ContextHolder.get().getResources().getInteger(R.integer.MAX_ELEVATION_FACTOR_VIEW_PAGER);
 

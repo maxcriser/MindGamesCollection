@@ -14,7 +14,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.mvmax.mindgames.R;
-import com.example.mvmax.mindgames.fragment.BaseFragment;
+import com.example.mvmax.mindgames.base.BaseFragment;
 import com.example.mvmax.mindgames.games.BaseGame;
 import com.example.mvmax.mindgames.listener.OnBackClickListener;
 import com.example.mvmax.mindgames.model.GameCardModel;

@@ -10,8 +10,8 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.mvmax.mindgames.R;
-import com.example.mvmax.mindgames.dialogexample.DialogExampleView;
-import com.example.mvmax.mindgames.dialogexample.DialogMessageModel;
+import com.example.mvmax.mindgames.example.ExampleMessageModel;
+import com.example.mvmax.mindgames.example.ExampleView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,10 +19,10 @@ import java.util.List;
 public class GameCardExampleFragment extends Fragment {
 
     public static final String EXTRA_DIALOG_EXAMPLE_MODEL_LIST = "extra_example_message_model_list";
-    List<DialogMessageModel> mDialogMessageModelList;
-    DialogExampleView mDialogExampleView;
+    List<ExampleMessageModel> mExampleMessageModelList;
+    ExampleView mExampleView;
 
-    public static Fragment newInstance(@NonNull final List<DialogMessageModel> mRuleModelList) {
+    public static Fragment newInstance(@NonNull final List<ExampleMessageModel> mRuleModelList) {
         final Bundle bundle = new Bundle();
         bundle.putParcelableArrayList(EXTRA_DIALOG_EXAMPLE_MODEL_LIST, (ArrayList<? extends Parcelable>) mRuleModelList);
 
@@ -46,16 +46,16 @@ public class GameCardExampleFragment extends Fragment {
     }
 
     private void initViews(final View pView) {
-        mDialogExampleView = pView.findViewById(R.id.game_fragment_dialog_example_view);
+        mExampleView = pView.findViewById(R.id.game_fragment_dialog_example_view);
     }
 
     private void updateDialog() {
         final Bundle bundle = getArguments();
 
         if (bundle != null) {
-            mDialogMessageModelList = bundle.getParcelableArrayList(EXTRA_DIALOG_EXAMPLE_MODEL_LIST);
+            mExampleMessageModelList = bundle.getParcelableArrayList(EXTRA_DIALOG_EXAMPLE_MODEL_LIST);
         }
 
-        mDialogExampleView.setItems(mDialogMessageModelList);
+        mExampleView.setItems(mExampleMessageModelList);
     }
 }

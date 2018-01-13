@@ -1,4 +1,4 @@
-package com.example.mvmax.mindgames.dialogexample;
+package com.example.mvmax.mindgames.example;
 
 import android.os.Parcel;
 import android.os.Parcelable;
@@ -7,7 +7,7 @@ import android.support.annotation.IntDef;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
-public class DialogMessageModel implements Parcelable {
+public class ExampleMessageModel implements Parcelable {
 
     @IntDef({DialogMessageType.INFO,
             DialogMessageType.PRESENTER,
@@ -26,7 +26,7 @@ public class DialogMessageModel implements Parcelable {
     private int mType;
     private String mMessage;
 
-    public DialogMessageModel(final String pMessage, @DialogMessageType final int pType) {
+    public ExampleMessageModel(final String pMessage, @DialogMessageType final int pType) {
         mMessage = pMessage;
         mType = pType;
     }
@@ -48,21 +48,21 @@ public class DialogMessageModel implements Parcelable {
         return mMessage;
     }
 
-    protected DialogMessageModel(final Parcel in) {
+    protected ExampleMessageModel(final Parcel in) {
         mType = in.readInt();
         mMessage = in.readString();
     }
 
-    public static final Creator<DialogMessageModel> CREATOR = new Creator<DialogMessageModel>() {
+    public static final Creator<ExampleMessageModel> CREATOR = new Creator<ExampleMessageModel>() {
 
         @Override
-        public DialogMessageModel createFromParcel(final Parcel in) {
-            return new DialogMessageModel(in);
+        public ExampleMessageModel createFromParcel(final Parcel in) {
+            return new ExampleMessageModel(in);
         }
 
         @Override
-        public DialogMessageModel[] newArray(final int size) {
-            return new DialogMessageModel[size];
+        public ExampleMessageModel[] newArray(final int size) {
+            return new ExampleMessageModel[size];
         }
     };
 

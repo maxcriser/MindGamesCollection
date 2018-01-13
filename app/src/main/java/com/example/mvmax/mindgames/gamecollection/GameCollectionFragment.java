@@ -1,4 +1,4 @@
-package com.example.mvmax.mindgames.collection;
+package com.example.mvmax.mindgames.gamecollection;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -10,37 +10,38 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.mvmax.mindgames.R;
-import com.example.mvmax.mindgames.adapter.CardPagerPagerAdapter;
-import com.example.mvmax.mindgames.fragment.BaseFragment;
+import com.example.mvmax.mindgames.base.BaseFragment;
+import com.example.mvmax.mindgames.gamecollection.adapter.GameCollectionPagerAdapter;
+import com.example.mvmax.mindgames.gamecollection.listener.GameCollectionListener;
 import com.example.mvmax.mindgames.games.YesNoGame;
 import com.example.mvmax.mindgames.listener.OpenDrawerClickListener;
 import com.example.mvmax.mindgames.toolbar.Toolbar;
 import com.example.mvmax.mindgames.transformer.ShadowTransformer;
 
-public class CollectionFragment extends BaseFragment {
+public class GameCollectionFragment extends BaseFragment {
 
     private static final String EXTRA_COLLECTION_LISTENER = "extra_collection_listener";
 
-    private CollectionListener mCollectionListener;
+    private GameCollectionListener mGameCollectionListener;
     private Toolbar mToolbar;
     private ViewPager mViewPager;
-    private CardPagerPagerAdapter mCardAdapter;
+    private GameCollectionPagerAdapter mCardAdapter;
     private ShadowTransformer mCardShadowTransformer;
 
     private final ViewPager.OnPageChangeListener mOnPageChangeListener = new ViewPager.SimpleOnPageChangeListener() {
 
         @Override
         public void onPageSelected(final int position) {
-            mCollectionListener.onPageSelected(mCardAdapter.getData().get(position).getPoster());
+            mGameCollectionListener.onPageSelected(mCardAdapter.getData().get(position).getPoster());
         }
     };
 
-    public static Fragment newInstance(@NonNull final CollectionListener pCollectionListener) {
+    public static Fragment newInstance(@NonNull final GameCollectionListener pGameCollectionListener) {
         final Bundle bundle = new Bundle();
 
-        bundle.putSerializable(EXTRA_COLLECTION_LISTENER, pCollectionListener);
+        bundle.putSerializable(EXTRA_COLLECTION_LISTENER, pGameCollectionListener);
 
-        final CollectionFragment baseFragment = new CollectionFragment();
+        final GameCollectionFragment baseFragment = new GameCollectionFragment();
         baseFragment.setArguments(bundle);
 
         return baseFragment;
@@ -56,7 +57,7 @@ public class CollectionFragment extends BaseFragment {
             return;
         }
 
-        mCollectionListener = (CollectionListener) bundle.getSerializable(EXTRA_COLLECTION_LISTENER);
+        mGameCollectionListener = (GameCollectionListener) bundle.getSerializable(EXTRA_COLLECTION_LISTENER);
 
         setStatusBarPadding();
         initViews();
@@ -72,7 +73,7 @@ public class CollectionFragment extends BaseFragment {
 
         mViewPager = view.findViewById(R.id.view_pager);
 
-        mCardAdapter = new CardPagerPagerAdapter(getContext());
+        mCardAdapter = new GameCollectionPagerAdapter(getContext());
         mCardAdapter.addCardItem(new YesNoGame());
         mCardAdapter.addCardItem(new YesNoGame());
         mCardAdapter.addCardItem(new YesNoGame());
@@ -96,7 +97,7 @@ public class CollectionFragment extends BaseFragment {
             return;
         }
 
-        mCollectionListener.onPageSelected(R.drawable.template_blurred_background);
+        mGameCollectionListener.onPageSelected(R.drawable.template_blurred_background);
 
         mToolbar = view.findViewById(R.id.toolbar_view);
         mToolbar.getMenuIconView().setOnClickListener(new OpenDrawerClickListener(getContext()));
@@ -109,14 +110,14 @@ public class CollectionFragment extends BaseFragment {
 
     @Override
     public void onPause() {
-        mCollectionListener.onPause();
+        mGameCollectionListener.onPause();
 
         super.onPause();
     }
 
     @Override
     public void onResume() {
-        mCollectionListener.onResume();
+        mGameCollectionListener.onResume();
 
         super.onResume();
     }

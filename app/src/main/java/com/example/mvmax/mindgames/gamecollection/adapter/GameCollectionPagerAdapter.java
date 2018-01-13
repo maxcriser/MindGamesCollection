@@ -1,4 +1,4 @@
-package com.example.mvmax.mindgames.adapter;
+package com.example.mvmax.mindgames.gamecollection.adapter;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -10,20 +10,20 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.mvmax.mindgames.R;
-import com.example.mvmax.mindgames.activity.BaseActivity;
+import com.example.mvmax.mindgames.base.BaseActivity;
 import com.example.mvmax.mindgames.games.BaseGame;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class CardPagerPagerAdapter extends PagerAdapter implements ICardPagerAdapter {
+public class GameCollectionPagerAdapter extends PagerAdapter implements IGameCollectionPagerAdapter {
 
     private final List<CardView> mViews;
     private final List<BaseGame> mData;
     private float mBaseElevation;
     private final Context mContext;
 
-    public CardPagerPagerAdapter(final Context pContext) {
+    public GameCollectionPagerAdapter(final Context pContext) {
         mData = new ArrayList<>();
         mViews = new ArrayList<>();
         mContext = pContext;

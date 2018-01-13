@@ -14,8 +14,9 @@
     <!--android:fontFamily="sans-serif-thin"      // roboto thin (android 4.2)-->
     <!--android:fontFamily="sans-serif-medium"    // roboto medium (android 5.0)-->
     <style name="GameFragmentTitleStyle">
+        <item name="android:ellipsize">end</item>
         <item name="android:fontFamily">sans-serif</item>
-        <item name="android:maxLines">2</item>
+        <item name="android:maxLines">@integer/GAME_FRAGMENT_TITLE_MAX_LINES</item>
         <item name="android:textColor">@color/white</item>
         <item name="android:textSize">@dimen/game_fragment_header_text_title_size</item>
     </style>
@@ -29,6 +30,7 @@
     </style>
 
     <style name="GameFragmentDescriptionStyle">
+        <item name="android:ellipsize">end</item>
         <item name="android:fontFamily">sans-serif-thin</item>
         <item name="android:maxLines">@integer/GAME_FRAGMENT_DESCRIPTION_MAX_LINES</item>
         <item name="android:textColor">@color/white</item>
@@ -36,6 +38,10 @@
     </style>
 
     <style name="DrawerButtonStyle">
+        <item name="android:textColor">@color/drawer_item_text</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:background">@drawable/ripple_drawer_item</item>
         <item name="android:fontFamily">sans-serif-thin</item>
         <item name="android:layout_height">@dimen/drawer_item_button_height</item>
         <item name="android:lines">@integer/DRAWER_BUTTON_MAX_LINES</item>

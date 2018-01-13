@@ -20,38 +20,38 @@
 
     <com.example.mvmax.mindgames.drawer.DrawerButton
         android:id="@+id/drawer_item_button_settings"
-        style="@style/DrawerButtonStyle"
         android:layout_width="match_parent"
+        android:layout_height="@dimen/drawer_item_button_height"
         drawer_button:item_title="Profile"/>
 
     <com.example.mvmax.mindgames.drawer.DrawerButton
         android:id="@+id/drawer_item_button_settings5"
-        style="@style/DrawerButtonStyle"
         android:layout_width="match_parent"
+        android:layout_height="@dimen/drawer_item_button_height"
         drawer_button:item_title="Test case number 1"/>
 
     <com.example.mvmax.mindgames.drawer.DrawerButton
         android:id="@+id/drawer_item_button_settings2"
-        style="@style/DrawerButtonStyle"
         android:layout_width="match_parent"
+        android:layout_height="@dimen/drawer_item_button_height"
         drawer_button:item_title="Test case number 2"/>
 
     <com.example.mvmax.mindgames.drawer.DrawerButton
         android:id="@+id/drawer_item_button_settings3"
-        style="@style/DrawerButtonStyle"
         android:layout_width="match_parent"
+        android:layout_height="@dimen/drawer_item_button_height"
         drawer_button:item_title="Account"/>
 
     <com.example.mvmax.mindgames.drawer.DrawerButton
         android:id="@+id/drawer_item_button_settings4"
-        style="@style/DrawerButtonStyle"
         android:layout_width="match_parent"
+        android:layout_height="@dimen/drawer_item_button_height"
         drawer_button:item_title="Settings"/>
 
     <com.example.mvmax.mindgames.drawer.DrawerButton
         android:id="@+id/drawer_item_button_settings6"
-        style="@style/DrawerButtonStyle"
         android:layout_width="match_parent"
+        android:layout_height="@dimen/drawer_item_button_height"
         drawer_button:item_title="Exit"/>
 
 </LinearLayout>

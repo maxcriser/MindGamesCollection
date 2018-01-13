@@ -7,27 +7,12 @@
     android:focusable="true"
     android:orientation="vertical">
 
-    <!--<android.support.v7.widget.AppCompatImageView-->
-    <!--android:id="@+id/game_fragment_background_image"-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="match_parent"-->
-    <!--android:scaleType="centerCrop"-->
-    <!--tools:srcCompat="@drawable/template_blurred_background"/>-->
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/game_fragment_top_layout_height_with_tab_layout">
-
-            <!--<include layout="@layout/view_main_blurred_layout"/>-->
-
-            <include layout="@layout/view_game_header"/>
-
-        </FrameLayout>
+        <include layout="@layout/view_game_header"/>
 
         <android.support.v4.view.ViewPager
             android:id="@+id/game_info_view_pager"

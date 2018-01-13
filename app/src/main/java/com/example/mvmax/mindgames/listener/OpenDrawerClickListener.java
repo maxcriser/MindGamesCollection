@@ -3,7 +3,7 @@ package com.example.mvmax.mindgames.listener;
 import android.content.Context;
 import android.view.View;
 
-import com.example.mvmax.mindgames.activity.BaseActivity;
+import com.example.mvmax.mindgames.base.BaseActivity;
 
 public class OpenDrawerClickListener implements View.OnClickListener {
 

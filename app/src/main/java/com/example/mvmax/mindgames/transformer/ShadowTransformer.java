@@ -5,7 +5,7 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.widget.CardView;
 import android.view.View;
 
-import com.example.mvmax.mindgames.adapter.ICardPagerAdapter;
+import com.example.mvmax.mindgames.gamecollection.adapter.IGameCollectionPagerAdapter;
 
 public class ShadowTransformer implements ViewPager.OnPageChangeListener, ViewPager.PageTransformer {
 
@@ -14,11 +14,11 @@ public class ShadowTransformer implements ViewPager.OnPageChangeListener, ViewPa
     private static final double SCALE_VALUE_INCREASED_MINUS_DEFAULT = 0.1;
 
     private final ViewPager mViewPager;
-    private final ICardPagerAdapter mAdapter;
+    private final IGameCollectionPagerAdapter mAdapter;
     private float mLastOffset;
     private boolean mScalingEnabled;
 
-    public ShadowTransformer(final ViewPager pViewPager, final ICardPagerAdapter pAdapter) {
+    public ShadowTransformer(final ViewPager pViewPager, final IGameCollectionPagerAdapter pAdapter) {
         mViewPager = pViewPager;
         pViewPager.addOnPageChangeListener(this);
         mAdapter = pAdapter;
@@ -84,7 +84,7 @@ public class ShadowTransformer implements ViewPager.OnPageChangeListener, ViewPa
                 currentCard.setScaleX((float) (SCALE_VALUE_DEFAULT + SCALE_VALUE_INCREASED_MINUS_DEFAULT * (SCALE_VALUE_DEFAULT - realOffset)));
                 currentCard.setScaleY((float) (SCALE_VALUE_DEFAULT + SCALE_VALUE_INCREASED_MINUS_DEFAULT * (SCALE_VALUE_DEFAULT - realOffset)));
             }
-            currentCard.setCardElevation((baseElevation + baseElevation * (ICardPagerAdapter.MAX_ELEVATION_FACTOR - SCALE_VALUE_DEFAULT) * (SCALE_VALUE_DEFAULT - realOffset)));
+            currentCard.setCardElevation((baseElevation + baseElevation * (IGameCollectionPagerAdapter.MAX_ELEVATION_FACTOR - SCALE_VALUE_DEFAULT) * (SCALE_VALUE_DEFAULT - realOffset)));
         }
 
         final CardView nextCard = mAdapter.getCardViewAt(nextPosition);
@@ -94,7 +94,7 @@ public class ShadowTransformer implements ViewPager.OnPageChangeListener, ViewPa
                 nextCard.setScaleX((float) (SCALE_VALUE_DEFAULT + SCALE_VALUE_INCREASED_MINUS_DEFAULT * (realOffset)));
                 nextCard.setScaleY((float) (SCALE_VALUE_DEFAULT + SCALE_VALUE_INCREASED_MINUS_DEFAULT * (realOffset)));
             }
-            nextCard.setCardElevation((baseElevation + baseElevation * (ICardPagerAdapter.MAX_ELEVATION_FACTOR - SCALE_VALUE_DEFAULT) * (realOffset)));
+            nextCard.setCardElevation((baseElevation + baseElevation * (IGameCollectionPagerAdapter.MAX_ELEVATION_FACTOR - SCALE_VALUE_DEFAULT) * (realOffset)));
         }
 
         mLastOffset = pPositionOffset;

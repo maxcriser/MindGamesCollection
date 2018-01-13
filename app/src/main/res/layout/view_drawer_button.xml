@@ -8,15 +8,12 @@
 
     <TextView
         android:id="@+id/drawer_item_button"
+        style="@style/DrawerButtonStyle"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/ripple_drawer_item"
-        android:clickable="true"
-        android:focusable="true"
         android:gravity="left|center_vertical"
         android:paddingLeft="@dimen/drawer_item_padding_left"
         android:paddingStart="@dimen/drawer_item_padding_left"
-        android:textColor="@color/drawer_item_text"
         tools:text="Settings"/>
 
 </FrameLayout>

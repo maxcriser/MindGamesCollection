@@ -17,6 +17,7 @@
     <color name="shadow_black_opacity_200">#c8000000</color>
     <color name="shadow_black_opacity_230">#e6000000</color>
     <color name="shadow_black_opacity_245">#f5000000</color>
+    <color name="transparent">@android:color/transparent</color>
 
     // brand
     <color name="brand_color">@color/material_blue</color>

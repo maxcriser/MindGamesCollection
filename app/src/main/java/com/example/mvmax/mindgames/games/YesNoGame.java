@@ -9,12 +9,11 @@ import android.view.ViewGroup;
 
 import com.example.mvmax.mindgames.ContextHolder;
 import com.example.mvmax.mindgames.R;
-import com.example.mvmax.mindgames.dialogexample.DialogMessageModel;
+import com.example.mvmax.mindgames.example.ExampleMessageModel;
 import com.example.mvmax.mindgames.gamecard.info.GameCardExampleFragment;
 import com.example.mvmax.mindgames.gamecard.info.GameCardRulesFragment;
 import com.example.mvmax.mindgames.model.GameCardTabModel;
 import com.example.mvmax.mindgames.rules.RuleModel;
-import com.thedeanda.lorem.Lorem;
 import com.thedeanda.lorem.LoremIpsum;
 
 import java.util.ArrayList;
@@ -66,19 +65,19 @@ public class YesNoGame extends BaseGame {
     }
 
     @Override
-    public List<DialogMessageModel> getDialogMessageList() {
-        final List<DialogMessageModel> exampleList = new ArrayList<>();
-        exampleList.add(new DialogMessageModel(LoremIpsum.getInstance().getWords(1, 20), DialogMessageModel.DialogMessageType.INFO));
-        exampleList.add(new DialogMessageModel(LoremIpsum.getInstance().getWords(1, 20), DialogMessageModel.DialogMessageType.PRESENTER));
-        exampleList.add(new DialogMessageModel(LoremIpsum.getInstance().getWords(1, 20), DialogMessageModel.DialogMessageType.PLAYER));
-        exampleList.add(new DialogMessageModel(LoremIpsum.getInstance().getWords(1, 20), DialogMessageModel.DialogMessageType.PRESENTER));
-        exampleList.add(new DialogMessageModel(LoremIpsum.getInstance().getWords(1, 20), DialogMessageModel.DialogMessageType.INFO));
-        exampleList.add(new DialogMessageModel(LoremIpsum.getInstance().getWords(1, 20), DialogMessageModel.DialogMessageType.PLAYER));
-        exampleList.add(new DialogMessageModel(LoremIpsum.getInstance().getWords(1, 20), DialogMessageModel.DialogMessageType.PLAYER));
-        exampleList.add(new DialogMessageModel(LoremIpsum.getInstance().getWords(1, 20), DialogMessageModel.DialogMessageType.PRESENTER));
-        exampleList.add(new DialogMessageModel(LoremIpsum.getInstance().getWords(1, 20), DialogMessageModel.DialogMessageType.INFO));
-        exampleList.add(new DialogMessageModel(LoremIpsum.getInstance().getWords(1, 20), DialogMessageModel.DialogMessageType.PRESENTER));
-        exampleList.add(new DialogMessageModel(LoremIpsum.getInstance().getWords(1, 20), DialogMessageModel.DialogMessageType.FINISH));
+    public List<ExampleMessageModel> getDialogMessageList() {
+        final List<ExampleMessageModel> exampleList = new ArrayList<>();
+        exampleList.add(new ExampleMessageModel(LoremIpsum.getInstance().getWords(1, 20), ExampleMessageModel.DialogMessageType.INFO));
+        exampleList.add(new ExampleMessageModel(LoremIpsum.getInstance().getWords(1, 20), ExampleMessageModel.DialogMessageType.PRESENTER));
+        exampleList.add(new ExampleMessageModel(LoremIpsum.getInstance().getWords(1, 20), ExampleMessageModel.DialogMessageType.PLAYER));
+        exampleList.add(new ExampleMessageModel(LoremIpsum.getInstance().getWords(1, 20), ExampleMessageModel.DialogMessageType.PRESENTER));
+        exampleList.add(new ExampleMessageModel(LoremIpsum.getInstance().getWords(1, 20), ExampleMessageModel.DialogMessageType.INFO));
+        exampleList.add(new ExampleMessageModel(LoremIpsum.getInstance().getWords(1, 20), ExampleMessageModel.DialogMessageType.PLAYER));
+        exampleList.add(new ExampleMessageModel(LoremIpsum.getInstance().getWords(1, 20), ExampleMessageModel.DialogMessageType.PLAYER));
+        exampleList.add(new ExampleMessageModel(LoremIpsum.getInstance().getWords(1, 20), ExampleMessageModel.DialogMessageType.PRESENTER));
+        exampleList.add(new ExampleMessageModel(LoremIpsum.getInstance().getWords(1, 20), ExampleMessageModel.DialogMessageType.INFO));
+        exampleList.add(new ExampleMessageModel(LoremIpsum.getInstance().getWords(1, 20), ExampleMessageModel.DialogMessageType.PRESENTER));
+        exampleList.add(new ExampleMessageModel(LoremIpsum.getInstance().getWords(1, 20), ExampleMessageModel.DialogMessageType.FINISH));
 
         return exampleList;
     }

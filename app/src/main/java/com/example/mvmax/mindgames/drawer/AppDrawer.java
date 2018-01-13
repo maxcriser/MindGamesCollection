@@ -10,16 +10,6 @@ import com.example.mvmax.mindgames.util.UiUtils;
 
 public class AppDrawer extends RelativeLayout {
 
-//    @Retention(RetentionPolicy.SOURCE)
-//    @IntDef({Action.NONE,
-//            Action.MENU,
-//            Action.BACK})
-//    public @interface Action {
-//        int NONE = 0;
-//        int MENU = 1;
-//        int BACK = 2;
-//    }
-
     public AppDrawer(final Context context) {
         super(context);
         init();
@@ -35,23 +25,10 @@ public class AppDrawer extends RelativeLayout {
         init(attrs);
     }
 
-    private boolean containsFlag(final int flagSet, final int flag) {
-        final int result = flagSet | flag;
-
-        return result == flagSet;
-    }
-
-    private void initActions(final int pActions) {
-//        if (pActions > Action.NONE) {
-//            VIEW.setVisibility(containsFlag(pActions, Action.MENU) ? View.VISIBLE : View.GONE);
-//        }
-    }
-
     private void inflate() {
         inflate(getContext(), R.layout.view_drawer, this);
 
         setStatusBarPadding();
-        // findViewById
     }
 
     private void init() {
@@ -60,16 +37,6 @@ public class AppDrawer extends RelativeLayout {
 
     private void init(final AttributeSet pAttrs) {
         inflate();
-
-//        @SuppressLint("CustomViewStyleable") final TypedArray typedArray = getContext().obtainStyledAttributes(pAttrs, R.styleable.custom_AppDrawer, 0, 0);
-//
-//        try {
-//            final int actions = typedArray.getInteger(R.styleable.custom_AppDrawer_action, Action.NONE);
-//
-//            updateVew(actions);
-//        } finally {
-//            typedArray.recycle();
-//        }
     }
 
     private void setStatusBarPadding() {

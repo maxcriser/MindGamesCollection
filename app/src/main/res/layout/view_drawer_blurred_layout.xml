@@ -9,6 +9,7 @@
         android:layout_height="match_parent"
         android:background="@color/drawer_blurred_color"/>
 
+    <!--removed to increase performance-->
     <!--<com.github.mmin18.widget.RealtimeBlurView-->
     <!--android:layout_width="match_parent"-->
     <!--android:layout_height="match_parent"-->
