@@ -7,6 +7,7 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
+import android.support.v7.widget.AppCompatButton;
 import android.support.v7.widget.AppCompatImageView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,10 +16,10 @@ import android.widget.TextView;
 
 import com.example.mvmax.mindgames.R;
 import com.example.mvmax.mindgames.base.BaseFragment;
-import com.example.mvmax.mindgames.games.BaseGame;
 import com.example.mvmax.mindgames.clicklistener.OnBackClickListener;
 import com.example.mvmax.mindgames.gamecard.model.GameCardModel;
 import com.example.mvmax.mindgames.gamecard.model.GameCardTabModel;
+import com.example.mvmax.mindgames.games.BaseGame;
 import com.example.mvmax.mindgames.toolbar.Toolbar;
 import com.example.mvmax.mindgames.util.UiUtils;
 
@@ -30,6 +31,7 @@ public class GameCardFragment extends BaseFragment {
     private AppCompatImageView mPoster;
     private TextView mName;
     private TextView mDescription;
+    private AppCompatButton mPlayButton;
     private GameCardModel mGameCardModel;
 
     public static Fragment newInstance(@NonNull final BaseGame pGameCardModel) {
@@ -103,8 +105,15 @@ public class GameCardFragment extends BaseFragment {
     private void bindHeader() {
         final int poster = mGameCardModel.getPoster();
 
-//        mBlurredBackground.setImageResource(poster);
         mPoster.setImageResource(poster);
+        mPlayButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(final View pView) {
+                openGameActivity(mGameCardModel.getFragment());
+            }
+        });
+
         UiUtils.setTextOrHide(mName, mGameCardModel.getName());
         UiUtils.setTextOrHide(mDescription, mGameCardModel.getDescription());
     }
@@ -122,10 +131,11 @@ public class GameCardFragment extends BaseFragment {
         mPoster = view.findViewById(R.id.game_fragment_poster);
         mName = view.findViewById(R.id.game_fragment_header_name);
         mDescription = view.findViewById(R.id.game_fragment_header_description);
+        mPlayButton = view.findViewById(R.id.game_fragment_play_button);
     }
 
     @Override
-    public View onCreateView(final LayoutInflater inflater, final ViewGroup container, final Bundle savedInstanceState) {
+    public View onCreateView(@NonNull final LayoutInflater inflater, final ViewGroup container, final Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_game, container, false);
     }
 }

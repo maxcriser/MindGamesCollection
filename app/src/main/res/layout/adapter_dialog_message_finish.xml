@@ -24,7 +24,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:layout_margin="8dp"
+                android:layout_margin="@dimen/dialog_example_info_icon_margin"
                 app:srcCompat="@drawable/ic_finish"/>
 
         </FrameLayout>

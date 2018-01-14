@@ -1,5 +1,6 @@
 package com.example.mvmax.mindgames.base;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -16,6 +17,7 @@ import com.example.mvmax.mindgames.games.BaseGame;
 import com.squareup.picasso.MemoryPolicy;
 import com.squareup.picasso.Picasso;
 
+@SuppressLint("Registered")
 public class BaseActivity extends AppCompatActivity {
 
     @Override
@@ -37,12 +39,12 @@ public class BaseActivity extends AppCompatActivity {
     }
 
     public void showGameFragment(final BaseGame pGameCardModel) {
-        final FragmentManager fragmentManager = getSupportFragmentManager();
-        final FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+            final FragmentManager fragmentManager = getSupportFragmentManager();
+            final FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
-        fragmentTransaction.replace(R.id.activity_main_content, GameCardFragment.newInstance(pGameCardModel))
-                .addToBackStack(null)
-                .commit();
+            fragmentTransaction.replace(R.id.activity_main_content, GameCardFragment.newInstance(pGameCardModel))
+                    .addToBackStack(null)
+                    .commit();
     }
 
     public void disableDrawer() {

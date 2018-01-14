@@ -20,6 +20,8 @@ public abstract class BaseGame extends Fragment {
         return null;
     }
 
+    public abstract Fragment newInstance();
+
     public abstract int getPoster();
 
     public abstract String getName();
@@ -31,5 +33,7 @@ public abstract class BaseGame extends Fragment {
     public abstract List<ExampleMessageModel> getDialogMessageList();
 
     public abstract List<GameCardTabModel> getTabList();
+
+    public abstract boolean isAvailable();
 
 }

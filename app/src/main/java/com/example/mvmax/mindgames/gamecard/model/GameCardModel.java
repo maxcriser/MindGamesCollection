@@ -1,8 +1,10 @@
 package com.example.mvmax.mindgames.gamecard.model;
 
+import android.support.v4.app.Fragment;
+
 import com.example.mvmax.mindgames.gamecard.info.example.ExampleMessageModel;
-import com.example.mvmax.mindgames.games.BaseGame;
 import com.example.mvmax.mindgames.gamecard.info.rules.RuleModel;
+import com.example.mvmax.mindgames.games.BaseGame;
 
 import java.io.Serializable;
 import java.util.List;
@@ -13,6 +15,10 @@ public class GameCardModel implements Serializable {
 
     public GameCardModel(final BaseGame pBaseGame) {
         mBaseGame = pBaseGame;
+    }
+
+    public Fragment getFragment() {
+        return mBaseGame.newInstance();
     }
 
     public List<GameCardTabModel> getTabList() {

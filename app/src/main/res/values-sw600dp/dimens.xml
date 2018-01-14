@@ -18,6 +18,6 @@
     <dimen name="game_fragment_header_text_description_size">20sp</dimen>
     <dimen name="game_fragment_rules_text_description_size">20sp</dimen>
     <dimen name="dialog_example_text_message_size">20sp</dimen>
-    <dimen name="game_fragment_header_text_margin_left">24dp</dimen>
+    <dimen name="game_fragment_header_text_margin_left">20dp</dimen>
 
 </resources>

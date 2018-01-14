@@ -13,7 +13,7 @@ import com.example.mvmax.mindgames.R;
 import com.example.mvmax.mindgames.base.BaseFragment;
 import com.example.mvmax.mindgames.gamecollection.adapter.GameCollectionPagerAdapter;
 import com.example.mvmax.mindgames.gamecollection.listener.IGameCollectionListener;
-import com.example.mvmax.mindgames.games.YesNoGame.YesNoGame;
+import com.example.mvmax.mindgames.games.guessthestory.GuessTheStoryGame;
 import com.example.mvmax.mindgames.clicklistener.OpenDrawerClickListener;
 import com.example.mvmax.mindgames.toolbar.Toolbar;
 import com.example.mvmax.mindgames.gamecollection.transformer.ShadowTransformer;
@@ -74,9 +74,9 @@ public class GameCollectionFragment extends BaseFragment {
         mViewPager = view.findViewById(R.id.view_pager);
 
         mCardAdapter = new GameCollectionPagerAdapter(getContext());
-        mCardAdapter.addCardItem(new YesNoGame());
-        mCardAdapter.addCardItem(new YesNoGame());
-        mCardAdapter.addCardItem(new YesNoGame());
+        mCardAdapter.addCardItem(new GuessTheStoryGame());
+        mCardAdapter.addCardItem(new GuessTheStoryGame());
+        mCardAdapter.addCardItem(new GuessTheStoryGame());
 
         mCardShadowTransformer = new ShadowTransformer(mViewPager, mCardAdapter);
         mCardShadowTransformer.enableScaling();

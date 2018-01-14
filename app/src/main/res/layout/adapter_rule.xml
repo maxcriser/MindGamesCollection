@@ -25,13 +25,13 @@
                 <FrameLayout
                     android:id="@+id/rule_top_line"
                     android:layout_width="@dimen/rule_line_width"
-                    android:layout_height="16dp"
+                    android:layout_height="@dimen/fragment_rule_top_line_height"
                     android:background="@color/rules_line_color"/>
 
                 <FrameLayout
                     android:id="@+id/rule_bottom_line"
                     android:layout_width="@dimen/rule_line_width"
-                    android:layout_height="36dp"
+                    android:layout_height="@dimen/fragment_rule_bottom_line_height"
                     android:background="@color/rules_line_color"/>
 
             </LinearLayout>
@@ -40,15 +40,15 @@
                 android:layout_width="@dimen/rule_circle_outer_size"
                 android:layout_height="@dimen/rule_circle_outer_size"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="2dp"
-                app:srcCompat="@drawable/rule_circle_outer"/>
+                android:layout_marginTop="@dimen/fragment_rule_circle_outer_top_margin"
+                app:srcCompat="@drawable/ic_rule_circle_outer"/>
 
             <android.support.v7.widget.AppCompatImageView
                 android:layout_width="@dimen/rule_circle_interior_size"
                 android:layout_height="@dimen/rule_circle_interior_size"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="5dp"
-                app:srcCompat="@drawable/rule_circle_interior"/>
+                android:layout_marginTop="@dimen/fragment_rule_circle_interior_top_margin"
+                app:srcCompat="@drawable/ic_rule_circle_interior"/>
 
         </FrameLayout>
 

@@ -26,18 +26,12 @@ public class ExampleAdapter extends RecyclerView.Adapter<ExampleAdapter.DialogEx
         }
     }
 
-    public ExampleAdapter(final List<ExampleMessageModel> pList) {
+    ExampleAdapter(final List<ExampleMessageModel> pList) {
         mList = pList;
     }
 
     public void setData(final List<ExampleMessageModel> pList) {
         mList = pList;
-    }
-
-    public void addData(final Collection<ExampleMessageModel> pList) {
-        if (mList != null) {
-            mList.addAll(pList);
-        }
     }
 
     @Override

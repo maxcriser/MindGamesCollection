@@ -1,9 +1,8 @@
 package com.example.mvmax.mindgames.clicklistener;
 
+import android.app.Activity;
 import android.content.Context;
 import android.view.View;
-
-import com.example.mvmax.mindgames.base.BaseActivity;
 
 public class OnBackClickListener implements View.OnClickListener {
 
@@ -15,6 +14,6 @@ public class OnBackClickListener implements View.OnClickListener {
 
     @Override
     public void onClick(final View pView) {
-        ((BaseActivity) mContext).onBackPressed();
+        ((Activity) mContext).onBackPressed();
     }
 }

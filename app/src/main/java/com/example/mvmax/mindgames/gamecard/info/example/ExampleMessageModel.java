@@ -36,7 +36,7 @@ public class ExampleMessageModel implements Parcelable {
     }
 
     @DialogMessageType
-    public int getType() {
+    int getType() {
         return mType;
     }
 
@@ -44,11 +44,11 @@ public class ExampleMessageModel implements Parcelable {
         mMessage = pMessage;
     }
 
-    public String getMessage() {
+    String getMessage() {
         return mMessage;
     }
 
-    protected ExampleMessageModel(final Parcel in) {
+    private ExampleMessageModel(final Parcel in) {
         mType = in.readInt();
         mMessage = in.readString();
     }
