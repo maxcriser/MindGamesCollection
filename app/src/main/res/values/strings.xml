@@ -38,4 +38,13 @@
     <string name="guess_the_story_ex_16">Yes. The story is solved.</string>
     <string name="guess_the_story_ex_17">Answer: The rescuer put his head in the jaws of the lion and then someone decided to photograph the whole thing. The lion was frightened by the flash and slammed his mouth shut. The trainer was left without a head.</string>
 
+    <string name="authenticator">Authorization</string>
+    <string name="auth_protect_your_account">Protect your account in just a few minutes by reviewing your security settings and activity.</string>
+    <string name="powered_by_dev">Powered by Google</string>
+    <string name="continue_with_google">Continue with Google</string>
+    <string name="continue_with_facebook">Continue with Facebook</string>
+    <string name="skip_auth">Skip authorization</string>
+    <string name="search_your_items">Search your items</string>
+    <string name="privacy_policy_text">By continuing, you agree to CKeeper\'s Terms of Service and Privacy Policy.</string>
+
 </resources>

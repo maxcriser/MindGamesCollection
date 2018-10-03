@@ -18,6 +18,10 @@
     <color name="shadow_black_opacity_230">#e6000000</color>
     <color name="shadow_black_opacity_245">#f5000000</color>
     <color name="transparent">@android:color/transparent</color>
+    <color name="googleColor">#db3236</color>
+    <color name="googleColor2">#4885ed</color>
+    <color name="facebookColor">#3b5998</color>
+
 
     // brand
     <color name="brand_color">@color/material_blue</color>
@@ -37,5 +41,11 @@
     <color name="text_color">@color/black</color>
     <color name="example_message_player_color">@color/brand_color</color>
     <color name="example_message_presenter_color">@color/gray_light</color>
+    <color name="whiteGray">#f0f0f0</color>
+    <color name="authStatusBarColor">#ffdbc5</color>
+    <color name="textColorWhite">@color/white</color>
+    <color name="text_color_black">#000</color>
+    <color name="text_color_dark">#465761</color>
+    <color name="text_color_white">#fff</color>
 
 </resources>
